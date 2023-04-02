@@ -1,8 +1,9 @@
 print("Hello, World!")
 
 def fib(n):
-    if n == 1 or n == 2:
-        return n - 1
-    return fib(n - 1) + fib(n - 2)
+    first, second = 0, 1
+    for _ in range(0, n):
+        print(first)
+        first, second = second, first + second
 
-print(fib(int(input())))
+fib(int(input()))
